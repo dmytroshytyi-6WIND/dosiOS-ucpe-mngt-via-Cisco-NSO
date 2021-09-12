@@ -1,4 +1,6 @@
 # dosiOS-mngt-by-Cisco-NSO
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fdmytroshytyi%2FdosiOS-mngt-by-Cisco-NSO&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
+
 Using ietf-ucpe models Cisco NSO manages the dosiOS ucpe.
 
 This repository contains the NSO package to manage the ["dosiOS ucpe software"](https://github.com/dmytroshytyi/dosiOS-uCPE)
