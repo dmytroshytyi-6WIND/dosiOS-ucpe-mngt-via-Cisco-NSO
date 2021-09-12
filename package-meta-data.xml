@@ -1,0 +1,21 @@
+<!--
+ - File              : package-meta-data.xml
+ - Author            : Dmytro Shytyi
+ - Site              : https://dmytro.shytyi.net
+ - Date              : 11.09.2021
+ - Last Modified Date: 11.09.2021
+ - Last Modified By  : Dmytro Shytyi
+-->
+<ncs-package xmlns="http://tail-f.com/ns/ncs-packages">
+  <name>ucpe-network-model</name>
+  <package-version>1.0</package-version>
+  <description>dosiOS mngt based on ucpe-ietf. Contact: Dmytro SHYTYI </description>
+  <ncs-min-version>5.0</ncs-min-version>
+
+  <component>
+    <name>main</name>
+    <application>
+      <python-class-name>ucpe_network_model.main.Main</python-class-name>
+    </application>
+  </component>
+</ncs-package>

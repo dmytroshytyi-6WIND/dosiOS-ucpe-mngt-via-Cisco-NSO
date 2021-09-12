@@ -1,0 +1,25 @@
+<!--
+- File              : ucpe-sw-ports.xml
+- Author            : Dmytro Shytyi
+- Site              : https://dmytro.shytyi.net
+- Date              : 10.09.2021
+- Last Modified Date: 10.09.2021
+- Last Modified By  : Dmytro Shytyi
+-->
+<config-template xmlns="http://tail-f.com/ns/config/1.0">
+	<devices xmlns="http://tail-f.com/ns/ncs">
+		<device>
+			<name>{$dosiOS-device}</name>
+			<config>
+				<ecp xmlns="urn:dosi.shytyi.net:mgmt:ecp:1">
+					<switches>
+						<switch>{$dosiOS-sw}</switch>
+						<ports>
+							<port>{$dosiOS-port}</port>
+						</ports>
+					</switches>
+				</ecp>
+			</config>
+		</device>
+	</devices>
+</config-template>

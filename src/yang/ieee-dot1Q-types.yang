@@ -1,0 +1,320 @@
+module ieee-dot1Q-types {
+	
+	namespace "urn:ieee:params:xml:ns:yang:ieee-dot1Q-types";
+    prefix "dot1Q-types";
+    
+    organization
+        "Institute of Electrical and Electronics Engineers";
+
+      contact
+        "Web URL: http://ieee.org/
+            E-mail:  corporate-communications@ieee.org
+            Postal:  
+                     U.S.A.
+            Phone:   +1 732-563-6820
+            Fax:     +1 732-981-9511";
+
+    description "Common types used within dot1Q-bridge.";
+
+    revision "2015-08-18" {
+        description "Initial revision.";
+    }
+	
+	typedef nameType {
+		type string { length "0..32"; }
+		description 
+			"A text string of up to 32 characters, of locally 
+			determined significance.";
+	}
+	
+	typedef portNumberType {
+		//type leafref {	
+		//	path "/if:interfaces/if:interface/if:name";
+		//}
+		type uint16 { range "1..4095"; }
+		description 
+			"An Unsigned value assigned to a Port as part of
+			a Port Identifier. Valid Port Numbers are in the range 1 
+			through 4095.";
+	}
+	
+	typedef priorityType {
+		type uint8 { range "0..7"; }
+		description 
+			"A range of priorities from 0 to 7 (inclusive).";
+	}
+	
+	typedef vid-range {
+		/*
+		 * Defines the type used to represent ranges of VLAN Ids.
+		 *
+		 * Ideally we would model that as a list of VLAN Ids in YANG, but
+		 * the model is easier to use if this is just represented as a
+		 * string.
+		 *
+		 * This type is used to match an ordered list of VLAN Ids, or
+		 * contiguous ranges of VLAN Ids. Valid VLAN Ids must be in the
+		 * range 1 to 4094, and included in the list in non overlapping
+		 * ascending order.
+		 *
+		 * For example, "1, 10-100, 50, 500-1000"
+		 *
+		 */		
+		type string {
+			pattern "([0-9]{1,4}(-[0-9]{1,4})?(,[0-9]{1,4}" +
+		            "(-[0-9]{1,4})?)*)";
+		    }
+		description 
+			"A list of VLAN Ids, or non overlapping VLAN ranges,
+            in ascending order, between 1 and 4094";
+	}
+	
+	typedef pcpSelectionType {
+		type enumeration {
+			enum 8P0D;
+			enum 7P1D;
+			enum 6P2D;
+			enum 5P3D;
+		}
+		description 
+			"Priority Code Point selection types.";
+	}
+	
+	typedef protocolTemplateFormatType {
+		type enumeration {
+			enum Ethernet;
+			enum RFC1042;
+			enum SNAP;
+			enum LLC;
+		}
+		description 
+			"A value representing the frame format to be matched.";
+	}
+	
+	typedef etherType {
+		type string {
+			pattern '[0-9a-fA-F]{2}-[0-9a-fA-F]{2}';
+		}
+		description 
+			"The Ethernet Type value.";
+	}
+	
+	grouping priorityRegenerationTable {
+		description 
+			"The priority regeneration table.";
+		leaf priority0 {
+			type priorityType;
+		}
+		leaf priority1 {
+			type priorityType;
+		}
+		leaf priority2 {
+			type priorityType;
+		}
+		leaf priority3 {
+			type priorityType;
+		}
+		leaf priority4 {
+			type priorityType;
+		}
+		leaf priority5 {
+			type priorityType;
+		}
+		leaf priority6 {
+			type priorityType;
+		}
+		leaf priority7 {
+			type priorityType;
+		}
+	}
+	
+	grouping pcpDecodingTable {
+		description 
+			"The Priority Code Point decoding table.";
+		container pcp0 {
+			leaf priority {
+				type priorityType;
+			}
+			leaf drop-eligible {
+				type boolean;
+			}
+		}
+		container pcp1 {
+			leaf priority {
+				type priorityType;
+			}
+			leaf drop-eligible {
+				type boolean;
+			}
+		}
+		container pcp2 {
+			leaf priority {
+				type priorityType;
+			}
+			leaf drop-eligible {
+				type boolean;
+			}
+		}
+		container pcp3 {
+			leaf priority {
+				type priorityType;
+			}
+			leaf drop-eligible {
+				type boolean;
+			}
+		}
+		container pcp4 {
+			leaf priority {
+				type priorityType;
+			}
+			leaf drop-eligible {
+				type boolean;
+			}
+		}
+		container pcp5 {
+			leaf priority {
+				type priorityType;
+			}
+			leaf drop-eligible {
+				type boolean;
+			}
+		}
+		container pcp6 {
+			leaf priority {
+				type priorityType;
+			}
+			leaf drop-eligible {
+				type boolean;
+			}
+		}
+		container pcp7 {
+			leaf priority {
+				type priorityType;
+			}
+			leaf drop-eligible {
+				type boolean;
+			}
+		}
+	}
+	
+	grouping pcpEncodingTable {
+		description 
+			"The Priority Code Point encoding table.";
+		container priority0 {
+			leaf pcp-dei-false {
+				type priorityType;
+			}
+			leaf pcp-dei-true {
+				type priorityType;
+			}
+		}
+		container priority1 {
+			leaf pcp-dei-false {
+				type priorityType;
+			}
+			leaf pcp-dei-true {
+				type priorityType;
+			}
+		}
+		container priority2 {
+			leaf pcp-dei-false {
+				type priorityType;
+			}
+			leaf pcp-dei-true {
+				type priorityType;
+			}
+		}
+		container priority3 {
+			leaf pcp-dei-false {
+				type priorityType;
+			}
+			leaf pcp-dei-true {
+				type priorityType;
+			}
+		}
+		container priority4 {
+			leaf pcp-dei-false {
+				type priorityType;
+			}
+			leaf pcp-dei-true {
+				type priorityType;
+			}
+		}
+		container priority5 {
+			leaf pcp-dei-false {
+				type priorityType;
+			}
+			leaf pcp-dei-true {
+				type priorityType;
+			}
+		}
+		container priority6 {
+			leaf pcp-dei-false {
+				type priorityType;
+			}
+			leaf pcp-dei-true {
+				type priorityType;
+			}
+		}
+		container priority7 {
+			leaf pcp-dei-false {
+				type priorityType;
+			}
+			leaf pcp-dei-true {
+				type priorityType;
+			}
+		}
+	}
+	
+	grouping serviceAccessPriorityTable {
+		description 
+			"The Service Access Priority Table.";
+		leaf priority0 {
+			type priorityType;
+		}
+		leaf priority1 {
+			type priorityType;
+		}
+		leaf priority2 {
+			type priorityType;
+		}
+		leaf priority3 {
+			type priorityType;
+		}
+		leaf priority4 {
+			type priorityType;
+		}
+		leaf priority5 {
+			type priorityType;
+		}
+		leaf priority6 {
+			type priorityType;
+		}
+		leaf priority7 {
+			type priorityType;
+		}
+	}
+	
+	grouping trafficClassTable {
+		// To be defined
+	}
+	
+	grouping portMap {
+		description 
+			"A set of control indicators, one for each Port.";
+		list port-map {
+			key "port-number";			
+			leaf port-number {
+				type portNumberType;
+			}
+			leaf map {
+				// Need to work on this
+				type enumeration {
+					enum forward;
+					enum filter;
+					enum forward-filter;
+				}
+			}
+		}
+	}
+}

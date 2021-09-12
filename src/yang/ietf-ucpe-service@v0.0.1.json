@@ -1,0 +1,166 @@
+<CODE BEGINS> file "ietf-ucpe-network-service-pkg.json"
+   ========= NOTE: '\' line wrapping per BCP XX (RFC XXXX) ===========
+
+    {
+     "ietf-yang-instance-data:instance-data-set": {
+       "name": "ietf-ucpe-network-service-pkg",
+       "pkg-schema": {
+          package: "ietf-yang-package-defn-pkg@0.1.0.json"
+       },
+       "description": "YANG package for universal CPE network service",
+       "content-data": {
+         "ietf-yang-package-instance:yang-package": {
+           "name": "ietf-ucpe-network-service-pkg",
+           "version": "0.0.1",
+           "timestamp": "2021-09-09T17:00:00Z",
+           "organization": "IETF OPSAWG Working Group",
+           "contact" : "WG Web:   <http://tools.ietf.org/wg/opsawg/>, \
+                        WG List:  <mailto:opsawg@ietf.org>",
+           "description": "IETF uCPE network service YANG package.\
+              \
+              This package defines a small sample set of \
+              YANG modules that could represent the basic set of \
+              modules that a standard universal CPE device might be expected \
+              to support.",
+
+           "reference": "XXX, draft-shytyi-opsawg-vysm-10.xml",
+           "location": [ "https://github.com/dmytroshytyi/ucpe-ietf/\
+                                     ietf-ucpe-service@v0.0.1.json" ],
+           "module": [
+             {
+               "name": "ieee-dot1Q-types,
+               "revision": "2015-08-18",
+               "location": [ "/https://github.com/dmytroshytyi/\
+				ucpe-ietf/blob/master/ieee-dot1Q-types.yang" ],
+             },
+             {
+               "name": "ietf-interfaces",
+               "revision": "2018-02-20",
+               "location": [ "https://github.com/dmytroshytyi/\
+				ucpe-ietf/blob/master/\
+				ietf-interfaces%402018-02-20.yang" ],
+             },
+             {
+               "name": "ietf-ip",
+               "revision": "2018-02-22",
+               "location": [ "https://github.com/dmytroshytyi/ucpe-ietf\
+				/blob/master/ietf-ip%402018-02-22.yang" ],
+             },
+             {
+               "name": "ietf-logical-network-element",
+               "revision": "2019-01-25",
+               "location": [ "https://github.com/dmytroshytyi/\
+				ucpe-ietf/blob/master/\
+				ietf-logical-network-element%402019-01-25.yang" ],
+             },
+             {
+               "name": "ietf-network",
+               "revision": "2018-02-26",
+               "location": [ "https://github.com/dmytroshytyi/\
+				ucpe-ietf/blob/master/\
+				ietf-network%402018-02-26.yang" ],
+             },
+             {
+               "name": "ietf-network-instance",
+               "revision": "2019-01-21",
+               "location": [ "https://github.com/dmytroshytyi/\
+				ucpe-ietf/blob/master/\
+				ietf-network-instance%402019-01-21.yang" ],
+             },
+             {
+               "name": "ietf-network-topology",
+               "revision": "2018-02-26",
+               "location": [ "https://github.com/dmytroshytyi/\
+				ucpe-ietf/blob/master/\
+				ietf-network-topology%402018-02-26.yang" ],
+             },
+             {
+               "name": "ietf-routing-types",
+               "revision": "2017-12-04",
+               "location": [ "https://github.com/dmytroshytyi/\
+				ucpe-ietf/blob/master/\
+				ietf-routing-types%402017-12-04.yang" ],
+             },
+             {
+               "name": "ietf-te-topology",
+               "revision": "2019-02-07",
+               "location": [ "https://github.com/dmytroshytyi/\
+				ucpe-ietf/blob/master/\
+				ietf-te-topology%402019-02-07.yang" ],
+             },
+             {
+               "name": "ietf-te-topology-sf",
+               "revision": "2019-11-03",
+               "location": [ "https://github.com/dmytroshytyi/\
+				ucpe-ietf/blob/master/\
+				ietf-te-topology-sf%402019-11-03.yang" ],
+             },
+             {
+               "name": "ietf-te-types",
+               "revision": "2019-11-18",
+               "location": [ "https://github.com/dmytroshytyi/\
+				ucpe-ietf/blob/master/\
+				ietf-te-types%402019-11-18.yang" ],
+             },
+             {
+               "name": "ietf-ucpe-lne-properties",
+               "revision": "2019-11-21",
+               "location": [ "https://github.com/dmytroshytyi/\
+				ucpe-ietf/blob/master/\
+				ietf-ucpe-lne-properties%402019-11-21.yang" ],
+             },
+             {
+               "name": "ietf-ucpe-lt-virtual-link-id",
+               "revision": "2020-02-14",
+               "location": [ "https://github.com/dmytroshytyi/\
+				ucpe-ietf/blob/master/\
+				ietf-ucpe-lt-virtual-link-id%402020-02-14.yang" ],
+             },
+             {
+               "name": "ietf-ucpe-ni-properties",
+               "revision": "2019-11-27",
+               "location": [ "https://github.com/dmytroshytyi/\
+				ucpe-ietf/blob/master/\
+				ietf-ucpe-ni-properties%402019-11-27.yang" ],
+             },
+             {
+               "name": "ietf-ucpe-node-type",
+               "revision": "2020-02-14",
+               "location": [ "https://github.com/dmytroshytyi/\
+				ucpe-ietf/blob/master/\
+				ietf-ucpe-node-type%402020-02-14.yang" ],
+             },
+             {
+               "name": "ietf-ucpe-ni-properties",
+               "revision": "2019-11-27",
+               "location": [ "https://github.com/dmytroshytyi/\
+				ucpe-ietf/blob/master/\
+				ietf-ucpe-ni-properties%402019-11-27.yang" ],
+             },
+             {
+               "name": "ietf-yang-schema-mount",
+               "revision": "2019-01-14",
+               "location": [ "https://github.com/dmytroshytyi/\
+				ucpe-ietf/blob/master/\
+				ietf-yang-schema-mount%402019-01-14.yang" ],
+             },
+             {
+               "name": "etsi-nfv-common-deviation",
+               "revision": "2020-06-10",
+               "location": [ "https://github.com/dmytroshytyi/\
+				ucpe-ietf/blob/master/\
+				submodules/etsi-nfv-common-deviation.yang" ],
+             },
+             {
+               "name": "etsi-nfv-vnf-deviation",
+               "revision": "2020-06-10",
+               "location": [ "https://github.com/dmytroshytyi/\
+				ucpe-ietf/blob/master/\
+				submodules/etsi-nfv-vnf-deviation.yang" ],
+             }
+           ]
+         }
+       }
+     }
+   }
+   <CODE ENDS>

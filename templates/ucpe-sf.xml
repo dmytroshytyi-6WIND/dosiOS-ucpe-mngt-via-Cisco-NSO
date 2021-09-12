@@ -1,0 +1,37 @@
+<!--
+- File              : ucpe-sf.xml
+- Author            : Dmytro Shytyi
+- Site              : https://dmytro.shytyi.net
+- Date              : 10.09.2021
+- Last Modified Date: 10.09.2021
+- Last Modified By  : Dmytro Shytyi
+-->
+<config-template xmlns="http://tail-f.com/ns/config/1.0">
+	<devices xmlns="http://tail-f.com/ns/ncs">
+		<device>
+			<name>{$dosiOS-device}</name>
+			<config>
+				<ecp xmlns="urn:dosi.shytyi.net:mgmt:ecp:1">
+					<vms>
+						<vm>{$dosiOS-vm}</vm>
+						<cpu>{$dosiOS-cpu}</cpu>
+						<ram>{$dosiOS-ram}</ram>
+						<boot-from>cdrom</boot-from>
+						<queues-nmbr>{$dosiOS-qs}</queues-nmbr>
+						<if-nmbr>{$dosiOS-ifn}</if-nmbr>
+						<devices>
+							<device>{$dosiOS-dev}</device>
+							<drive>
+								<file>{$dosiOS-file}</file>
+								<drive-type>cdrom</drive-type>
+								<bus-type>virtio</bus-type>
+							</drive>
+						</devices>
+					</vms>
+
+				</ecp>
+
+			</config>
+		</device>
+	</devices>
+</config-template>
